@@ -1,0 +1,30 @@
+execute pathogen#infect()
+syntax enable
+filetype on
+filetype plugin indent on
+set smartindent
+set tabstop=4
+set shiftwidth=2
+set expandtab
+set number
+set ignorecase
+set smartcase
+set colorcolumn=80
+set cursorline
+set t_Co=256
+set background=dark
+let g:solarized_termcolors=256
+
+"nerdtree
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+"automatically open nerdtree when vim starts up with no files
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+colorscheme solarized
+
+"syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
