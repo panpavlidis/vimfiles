@@ -16,6 +16,10 @@ set t_Co=256
 set background=dark
 let g:solarized_termcolors=256
 
+"Multiple Paste
+xnoremap p pgvy
+set clipboard="+
+
 "nerdtree
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
@@ -28,6 +32,7 @@ colorscheme solarized
 
 "gitgutter
 let g:gitgutter_enabled = 0
+map <C-m> :GitGutterToggle<CR>
 
 "syntastic
 let g:syntastic_always_populate_loc_list = 1
