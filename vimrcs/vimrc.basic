@@ -32,7 +32,7 @@ colorscheme solarized
 
 "gitgutter
 let g:gitgutter_enabled = 0
-map <C-m> :GitGutterToggle<CR>
+map <C-l> :GitGutterToggle<CR>
 
 "syntastic
 let g:syntastic_always_populate_loc_list = 1
@@ -40,3 +40,5 @@ let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_flake8_args='--ignore=E501'
+
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
