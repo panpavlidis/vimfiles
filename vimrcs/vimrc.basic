@@ -46,4 +46,7 @@ let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_custom_ignore = '\.pyc$'
 
+"working dir is current file's dir
+autocmd BufEnter * lcd %:p:h
+
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
