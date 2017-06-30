@@ -108,8 +108,8 @@ let g:ctrlp_user_command = [
     \ ]
 
 "easyytags
-let g:easytags_by_filetype = '/home/mike/.vim/tags/'
-let g:easytags_file = '/home/mike/.vim/tags/tags'
+let g:easytags_by_filetype = '/home/p/.vim/tags/'
+let g:easytags_file = '/home/p/.vim/tags/tags'
 let g:easytags_auto_highlight = 0
 
 "nerdtree
