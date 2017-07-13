@@ -46,3 +46,7 @@
     path = bundle/editorconfig-vim
     url = https://github.com/editorconfig/editorconfig-vim
     branch = master
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+	branch = master
