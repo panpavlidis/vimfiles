@@ -4,6 +4,7 @@ filetype on
 filetype plugin indent on
 set autoindent
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 set number
@@ -14,6 +15,8 @@ set colorcolumn=80
 set cursorline
 set t_Co=256
 set background=dark
+set guifont=monaco
+set textwidth=0
 let g:solarized_termcolors=256
 
 "Multiple Paste
@@ -28,6 +31,7 @@ let NERDTreeIgnore = ['\.pyc$', '\.swp$']
 "automatically open nerdtree when vim starts up with no files
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 colorscheme solarized
 
 "gitgutter
@@ -39,12 +43,15 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_flake8_args='--ignore=E501'
+let g:syntastic_python_flake8_args='--ignore=E501,D203,D101,D400,D401'
 
 "ctrlp
 let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_custom_ignore = '\.pyc$'
+
+"youcompleteme
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 "working dir is current file's dir
 autocmd BufEnter * if expand('%:p') !~ '://' | :lcd %:p:h | endif
